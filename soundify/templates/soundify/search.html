@@ -1,0 +1,91 @@
+{% extends "soundify/base.html" %}
+
+{% load static %}
+
+{% block main %}
+
+<main class="main-section-search">
+    <figure class="first-row-search">
+        <figure class="first-row">
+            <img src="{% static "soundify/images/genres-image/rock-genre.jpg" %}" id="rock-genre">
+            <div class="genre-header"><a href="#">Rock</a></div>
+        </figure>
+        <figure class="first-row">
+            <img src="{% static "soundify/images/genres-image/metal-genre.png" %}" id="metal-genre">
+            <div class="genre-header"><a href="#">Metal</a></div>
+        </figure>
+        <figure class="first-row">
+            <img src="{% static "soundify/images/genres-image/blues-genre.jpg" %}" id="blues-genre">
+            <div class="genre-header"><a href="#">Blues</a></div>
+        </figure>
+    </figure>
+
+    <figure class="second-row-search">
+        <figure class="second-row">
+            <img src="{% static "soundify/images/genres-image/hiphop-genre.jpg" %}" id="hiphop-genre">
+            <div class="genre-header"><a href="#">HipHop</a></div>
+        </figure>
+        <figure class="second-row">
+            <img src="{% static "soundify/images/genres-image/r&b-genre.jpg" %}" id="rb-genre">
+            <div class="genre-header"><a href="#">R&B</a></div>
+        </figure>
+        <figure class="second-row">
+            <img src="{% static "soundify/images/genres-image/jazz-genre.jpg" %}" id="jazz-genre">
+            <div class="genre-header"><a href="#">Jazz</a></div>
+        </figure>
+    </figure>
+    
+    <figure class="third-row-search">
+        <figure class="third-row">
+            <img src="{% static "soundify/images/genres-image/pop-genre.jpg" %}" id="pop-genre">
+            <div class="genre-header"><a href="#">Pop</a></div>
+        </figure>
+        <figure class="third-row">
+            <img src="{% static "soundify/images/genres-image/eletronic-genre.jpg" %}" id="eletronic-genre">
+            <div class="genre-header"><a href="#">Eletronic</a></div>
+        </figure>
+        <figure class="third-row">
+            <img src="{% static "soundify/images/genres-image/latin-genre.jpg" %}" id="latin-genre">
+            <div class="genre-header"><a href="#">Latin</a></div>
+        </figure>
+    </figure>
+</main>
+<section class="hits-section">
+<h2 class="header-hits-section">Top Hits</h2>
+<div class="top-hits">
+    <ul class="top-hits-list">
+        <li>
+            <span>#1</span> <a href="https://www.youtube.com/watch?v=adLGHcj_fmA" target="_blank">Leave The Door Open Silk Sonic (Bruno Mars & Anderson .Paak)</a>
+        </li>
+        <li>
+            <span>#2</span> <a href="https://www.youtube.com/watch?v=6swmTBVI83k" target="_blank">Montero (Call Me By Your Name) Lil Nas X</a>
+        </li>
+        <li>
+            <span>#3</span> <a href="https://www.youtube.com/watch?v=tQ0yjYUFKAE" target="_blank">Peaches Justin Bieber Featuring Daniel Caesar & Giveon</a>
+        </li>
+        <li>
+            <span>#4</span> <a href="https://www.youtube.com/watch?v=rCiBgLOcuKU" target="_blank">Up Cardi B</a>
+        </li>
+        <li>
+            <span>#5</span> <a href="https://www.youtube.com/watch?v=ZmDBbnmKpqQ" target="_blank">Drivers License Olivia Rodrigo</a>
+        </li>
+        <li>
+            <span>#6</span> <a href="https://www.youtube.com/watch?v=XXYlFuWEuKI" target="_blank">Save Your Tears The Weeknd</a>
+        </li>
+        <li>
+            <span>#7</span> <a href="https://www.youtube.com/watch?v=TUVcZfQe-Kw" target="_blank">Levitating Dua Lipa Featuring DaBaby</a>
+        </li>
+        <li>
+            <span>#8</span> <a href="https://www.youtube.com/watch?v=cii6ruuycQA" target="_blank">Deja Vu Olivia Rodrigo</a>
+        </li>
+        <li>
+            <span>#9</span> <a href="https://www.youtube.com/watch?v=4NRXx6U8ABQ" target="_blank">Blinding Lights The Weeknd</a>
+        </li>
+        <li>
+            <span>#10</span><a href="https://www.youtube.com/watch?v=MEg-oqI9qmw" target="_blank">Astronaut In The Ocean Masked Wolf</a>
+        </li>
+    </ul>
+</div>
+</section>
+
+{% endblock %}

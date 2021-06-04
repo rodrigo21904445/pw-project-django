@@ -1,17 +1,18 @@
 {% extends "soundify/base.html" %}
 
+{% load static %}
+
 {% block main %}
 
 <div class="image-container">
     <div class="image-container-2"></div>
 </div>
 <div>
-    <a href="feedback.html" id="header-blur-image">Soundify</a>
+    <a href="{% url "soundify:feedback" %}" id="header-blur-image">Soundify</a>
 </div>
 <section class="main-section">
     <figure>
-        {% load static %}
-        <img src="{% static "images/logo-project.png" %}" alt="soundify logo" id="main-section-logo">
+        <img src="{% static "soundify/images/logo-project.png" %}" alt="soundify logo" id="main-section-logo">
     </figure>
     <div class="main-section-content">
         <p id="main-section-phrase">The newest music web aplication</p>

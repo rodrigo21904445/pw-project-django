@@ -1,0 +1,61 @@
+{% extends "soundify/base.html" %}
+
+{% load static %}
+
+{% block main %}
+
+<main class="tables-section">
+    <iframe id="iframe-video" width="560" height="315" src="https://www.youtube.com/embed/2SDvdsV3vXQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <h2 class="html-header">Html</h2>
+    <table border="1" cellpading="10%" cellspacing="5%" style="margin: auto;" class="html-table">
+        <tr>
+            <td>Headers</td>
+            <td>h2, h4</td>
+        </tr>
+        <tr>
+            <td>Marcadores</td>
+            <td>Header, Nav, Section, Footer</td>
+        </tr>
+        <tr>
+            <td>Atributos</td>
+            <td>src, alt, type, id, border, cellpading, cellspacing, style, href, target</td>
+        </tr>
+    </table>
+    <h2 class="css-header">Css</h2>
+    <table border="1" cellpading="10%" cellspacing="5%" style="margin: auto;" class="css-table">
+        <tr>
+            <td>Tipos de Seletores</td>
+            <td>Universal, Tipo, Classe, Id, Atributo, Pseudo-classe, Pseudo-elemnto</td>
+        </tr>
+        <tr>
+            <td>Combinadores de Seletores</td>
+            <td>Descendentes, Filhos, Adjacentes, Agrupados</td>
+        </tr>
+        <tr>
+            <td>Unidades</td>
+            <td>%, px, em</td>
+        </tr>
+    </table>
+</main>
+<section class="section-wordcloud">
+    <figure class="figure-wordcloud">
+        <img src="{% static "soundify/images/wordcloud.jpg" %}" width="450px">
+    </figure>
+    <details id="details-wordcloud"><summary></summary>Wordcloud</details>
+</section>
+<section class="feedback-section">
+    <h2 class="feedback-header">Let us know what you think!</h2>
+    <p class="feedback-p">Your opinion is very important to us so you can help us improve our services.</p>
+    <div class="rate-us">
+        <h4 class="rate-us-header">Click a star to rate our services</h4>
+        <div class="rate-us-star">
+            <span class="material-icons">&#xe885;</span>
+            <span class="material-icons">&#xe885;</span>
+            <span class="material-icons">&#xe885;</span>
+            <span class="material-icons">&#xe885;</span>
+            <span class="material-icons">&#xe885;</span>
+        </div>
+    </div>
+</section>            
+
+{% endblock %}

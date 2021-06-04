@@ -17,10 +17,10 @@
     <body>
         <nav class="main-nav">
             <ul>
-                <li><a href="index.html" class="home">Soundify</a></li>
-                <li><a href="search.html" class="search"><span class="material-icons">&#xe8b6;</span></a></li>
-                <li><a href="login.html" class="login">Log In</a></li>
-                <li><a href="register.html" class="register-button">Register for FREE</a></li>
+                <li><a href="{% url "soundify:index" %}" class="home">Soundify</a></li>
+                <li><a href="{% url "soundify:search" %}" class="search"><span class="material-icons">&#xe8b6;</span></a></li>
+                <li><a href="{% url "soundify:login" %}" class="login">Log In</a></li>
+                <li><a href="{% url "soundify:register" %}" class="register-button">Register for FREE</a></li>
             </ul>
         </nav>
         <main>
@@ -29,10 +29,10 @@
         </main>        
         <footer>
             <div id="developed-authors"><p>Developed by some damn good programmers</p></div>
-            <img src="images/iconfinder_Rounded_Facebook_svg_5282541.png" width="30px" height="25">
-            <img src="images/iconfinder_Rounded_Instagram_svg_5282544.png" width="30px" height="25">
-            <img src="images/iconfinder_Rounded_Twitter5_svg_5282551.png" width="30px" height="25">
-            <img src="images/iconfinder_Rounded_Linkedin2_svg_5282542.png" width="30px" height="25">
+            <img src="{% static "soundify/images/iconfinder_Rounded_Facebook_svg_5282541.png" %}" width="30px" height="25">
+            <img src="{% static "soundify/images/iconfinder_Rounded_Instagram_svg_5282544.png" %}" width="30px" height="25">
+            <img src="{% static "soundify/images/iconfinder_Rounded_Twitter5_svg_5282551.png" %}" width="30px" height="25">
+            <img src="{% static "soundify/images/iconfinder_Rounded_Linkedin2_svg_5282542.png" %}" width="30px" height="25">
         </footer>
     </body>
 </html>
