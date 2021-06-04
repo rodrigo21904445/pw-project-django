@@ -1,0 +1,660 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+body{
+    background-color: #151515;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+footer{
+    font-size: 10px;
+    font-weight: bold;  
+}
+
+label, input {
+    display: block;
+    align-items: center;
+}
+
+@media (max-width: 800px) {
+    body {
+        width: 100%;
+    }
+}
+
+@media (max-width: 650px) {
+    body {
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    body {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    body {
+        width: 100%;
+    }
+}
+
+.main-nav {
+    background-color: #4e0000;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main-nav ul{
+    list-style-type: none;
+    display: flex;
+}
+
+.main-nav ul li{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-nav ul a{
+    display: flex;
+    text-decoration: none;
+    color: #eeebdd;
+}
+
+.main-nav ul a:hover{
+    color: #000;
+}
+
+.main-nav a{
+    text-decoration: none;
+    color: #eeebdd;
+    font-weight: 800;
+    white-space: nowrap; 
+}
+
+.home{
+    margin-right: 150px;
+    font-size: 40px;
+    font-family: 'Londrina Solid', cursive;
+}
+
+.search {
+    margin-right: 750px;
+    margin-top: 15px;
+}
+
+.login {
+    margin-top: 15px;
+}
+
+.register-button {
+    background-color: #45526c;
+    color: #fff;
+    border: none;
+    border-radius: 150px;;
+    padding: 0 30px;
+    padding-top: 5px;
+    vertical-align: middle;
+    font-size: 16px;
+    line-height: 36px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 200px;
+}
+
+@keyframes image-container-animation {
+    0% {
+        opacity:1;
+    }
+
+    45% {
+        opacity:1;
+    }
+    
+    55% {
+        opacity:0;
+    }
+
+    100% {
+        opacity:0;
+    }
+}
+
+.image-container {
+    background-image: url(images/festival-image.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 650px;
+    margin-top: 5px;
+    filter: blur(8px);
+}
+
+.image-container-2 {
+    background-image: url(images/festival-image-2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 650px;
+    margin-top: 5px;
+    filter: blur(8px);
+    animation-name: image-container-animation;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-direction: alternate;
+}
+
+#header-blur-image {
+    font-family: 'Londrina Solid', cursive;
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 10%;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+#header-blur-image:hover {
+    color: #4e0000;
+    background: rgba(69, 82, 108, 1);
+    border-radius: 25px;
+}
+
+.main-section {
+    background-color: #4e0000;
+    display: grid;
+    grid-template-rows: 130px;
+}
+
+#main-section-logo {
+    display: flex;
+    justify-content: flex-start;
+    width: 300px;
+    padding-top: 30px;
+}
+
+.main-section div #main-section-phrase{
+    font-family: 'Londrina Solid', cursive;
+    font-size: 30px;
+    padding: 0px 8px 50px 8px;
+    text-align: center;
+}
+
+.main-section div #main-section-quote{
+    font-family: 'Londrina Solid', cursive;
+    font-size: 20px;
+    text-align: center;
+    font-style: italic;
+}
+
+#copyright { 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+#developed-authors {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.social-media-logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.main-section-search  figure > img{
+    width: 300px;
+    height: 250px; 
+}
+
+.first-row-search {
+    display: flex;
+    justify-content: center;
+}
+
+.second-row-search {
+    display: flex;
+    justify-content: center;
+}
+
+.third-row-search {
+    display: flex;
+    justify-content: center;
+}
+
+#rock-genre {
+    margin-right: 25px;
+}
+
+#metal-genre {
+    margin-right: 25px;
+}
+
+#hiphop-genre {
+    margin-right: 25px;
+}
+
+#rb-genre {
+    margin-right: 25px;
+}
+
+#pop-genre {
+    margin-right: 25px;
+}
+
+#eletronic-genre {
+    margin-right: 25px;
+}
+
+.genre-header {
+    position: relative;      
+    width: 50%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    top: -130px;
+    margin-left: 75px;
+    text-align: center;
+    background: rgba(69, 82, 108, 1);
+    border-radius: 25px;
+}
+
+.genre-header a {
+    font-family: 'Londrina Solid', cursive;
+    font-size: 30px;
+    color: #4e0000;
+    text-decoration: none;
+}
+
+.first-row:hover .genre-header {
+    opacity: 1;
+}
+
+.second-row:hover .genre-header {
+    opacity: 1;
+}
+
+.third-row:hover .genre-header {
+    opacity: 1;
+}
+
+/* hover genres*/
+.first-row:hover #rock-genre{
+    width: 320px;
+    height: 270px;
+}
+
+.first-row:hover #metal-genre{
+    width: 320px;
+    height: 270px;
+}
+
+.first-row:hover #blues-genre{
+    width: 320px;
+    height: 270px;
+}
+
+.second-row:hover #hiphop-genre{
+    width: 320px;
+    height: 270px;
+}
+
+.second-row:hover #rb-genre{
+    width: 320px;
+    height: 270px;
+}
+
+.second-row:hover #jazz-genre{
+    width: 320px;
+    height: 270px;
+}
+
+.third-row:hover #pop-genre{
+    width: 320px;
+    height: 270px;
+}
+
+.third-row:hover #eletronic-genre{
+    width: 320px;
+    height: 270px;
+}
+
+.third-row:hover #latin-genre{
+    width: 320px;
+    height: 270px;
+}
+
+.hits-section {
+    background-color: #4e0000;
+    height: 550px;
+}
+
+.header-hits-section {
+    font-family: 'Londrina Solid', cursive;
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.top-hits-list {
+    list-style-type: none;    
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 25em;
+    background-color: #45526c;
+    border-radius: 25px;
+    box-shadow:  0px 0px 5px 5px #eeebdd;
+}
+
+.top-hits-list li {
+    font-family: 'Londrina Solid', cursive;
+    font-size: 25px;
+    color: white;
+    text-align: start;
+    
+}
+
+.top-hits-list li span{
+    font-family: 'Londrina Solid', cursive;
+    font-size: 35px;
+    color: white;
+    margin-right: 200px;
+}
+
+.top-hits-list li a{
+    font-family: 'Londrina Solid', cursive;
+    font-size: 25px;
+    color: white;
+    margin-right: 200px;
+    text-decoration: none;
+}
+
+.login-section {
+    background-color: #45526c;
+    height: 50em;
+}
+
+.login-form {
+    padding-top: 10em;
+}
+
+.login-fieldset {
+    background-color: #bdc7c9;
+    margin-left: 40em;
+    margin-bottom: 20em;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    width: 400px;
+    height: 500px;
+    padding: 6em 8em;
+}
+
+.login-fieldset .user-pass {
+    position: relative;
+    border-bottom: 2px solid #4e0000;
+    margin: 30px 0;
+}
+
+.user-pass input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.user-pass label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.user-pass span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #4e0000;
+    transition: .5s;
+}
+
+.user-pass input:focus ~ label, .user-pass input:valid ~ label {
+    top: -10px;
+    color: #4e0000;
+}
+
+.user-pass input:focus ~ span::before, .user-pass input:valid ~ span::before {
+    width: 100%;
+}
+
+.forgot-pass {
+    margin: -5px 0 20px 5px;
+    color: #4e0000;
+    cursor: pointer;
+}
+
+.forgot-pass:hover {
+    text-decoration: underline;
+}
+
+input[type="submit"] {
+    width: 100%;
+    height: 50px;
+    border: 2px solid;
+    background: #45526c;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #4e0000;
+    font-weight: 800;
+    cursor: pointer;
+    outline: none;
+    
+}
+
+input[type="submit"]:hover {
+    border-color: #45526c;
+    transition: .5s;
+}
+
+.signup {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #4e0000;
+}
+
+.signup a {
+    color: #151515;
+    text-decoration: none;
+}
+
+.signup a:hover {
+    text-decoration: underline;
+}
+
+.register-section {
+    background-color: #45526c;
+    height: 50em;
+}
+
+.register-form {
+    padding-top: 10em;
+}
+
+.register-fieldset {
+    background-color: #bdc7c9;
+    margin-left: 40em;
+    margin-bottom: 20em;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    width: 400px;
+    height: 550px;
+    padding: 3em 8em;
+}
+
+.register-fieldset .user-pass {
+    position: relative;
+    border-bottom: 2px solid #4e0000;
+    margin: 30px 0;
+}
+
+
+input[type="checkbox"] {
+    margin: 20px 10px 30px 0;
+}
+
+#terms-condition {
+    color: #151515;
+    font-size: 15px;
+    bottom: 323px;
+    position: absolute;
+    margin-left: 20px;
+}
+
+.checkbox-terms-condition {
+    display: inline-block;
+}
+
+.feedback-section {
+    background-color: #45526c;
+    height: 25em;
+    border: 1px solid #45526c;
+}
+
+.feedback-header {
+    font-family: 'Londrina Solid', cursive;
+    font-size: 35px;
+    color: #4e0000;
+    display: flex;
+    justify-content: center;
+}
+
+.feedback-p {
+    font-family: 'Londrina Solid', cursive;
+    font-size: 16px;
+    font-style: italic;
+    color: #adadad;
+    display: flex;
+    justify-content: center;
+}
+
+.rate-us {
+    background-color: #bdc7c9;
+    border: 2px solid #fff;
+    width: 30%;
+    height: 50%;
+    margin-left: 40em;
+}
+
+.rate-us-header {
+    font-family: 'Londrina Solid', cursive;
+    font-size: 20px;
+    color: #4e0000;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.rate-us-star {
+    display: flex;
+    justify-content: center;
+}
+
+.rate-us-star span{
+    margin-right: 15px;
+}
+
+.rate-us-star span:hover{
+    color: darkgoldenrod;
+    cursor: pointer;
+}
+
+.tables-section {
+    background-color: #45526c;
+    height: 50em;
+}
+
+.html-table {
+    width: 50%;
+}
+
+.css-table {
+    width: 50%;
+}
+
+tr:nth-child(odd){
+    background-color: #4e0000;
+}
+
+.html-header {
+    font-family: 'Londrina Solid', cursive;
+    font-size: 35px;
+    color: #4e0000;   
+    display: flex;
+    justify-content: center; 
+}
+
+.css-header {
+    font-family: 'Londrina Solid', cursive;
+    font-size: 35px;
+    color: #4e0000;   
+    display: flex;
+    justify-content: center; 
+}
+
+.section-wordcloud {
+    background-color: #45526c;
+    border: 1px solid #45526c;
+}
+
+.figure-wordcloud {    
+    display: flex;
+    justify-content: center;
+}
+
+#details-wordcloud {
+    margin-left: 700px;
+}
+
+#iframe-video {
+    margin-left: 600px;
+}

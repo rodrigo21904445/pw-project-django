@@ -1,0 +1,22 @@
+{% extends "soundify/base.html" %}
+
+{% block main %}
+
+<div class="image-container">
+    <div class="image-container-2"></div>
+</div>
+<div>
+    <a href="feedback.html" id="header-blur-image">Soundify</a>
+</div>
+<section class="main-section">
+    <figure>
+        {% load static %}
+        <img src="{% static "images/logo-project.png" %}" alt="soundify logo" id="main-section-logo">
+    </figure>
+    <div class="main-section-content">
+        <p id="main-section-phrase">The newest music web aplication</p>
+        <p id="main-section-quote">“Music gives a soul to the universe, wings to the mind, flight to the imagination, and life to everything.” – Plato</p>
+    </div>
+</section>
+
+{% endblock  %}

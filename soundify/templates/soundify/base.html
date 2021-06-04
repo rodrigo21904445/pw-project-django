@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="music">
+        <meta name="keywords" content="HTML, CSS, Music, Genre">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" type="images/logo-project" href="images/logo-project.ico"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap" rel="stylesheet">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'soundify/css/base.css' %}">
+        <title>Soundify</title>
+    </head>
+    <body>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html" class="home">Soundify</a></li>
+                <li><a href="search.html" class="search"><span class="material-icons">&#xe8b6;</span></a></li>
+                <li><a href="login.html" class="login">Log In</a></li>
+                <li><a href="register.html" class="register-button">Register for FREE</a></li>
+            </ul>
+        </nav>
+        <main>
+            {% block main %}
+            {% endblock main %}
+        </main>        
+        <footer>
+            <div id="developed-authors"><p>Developed by some damn good programmers</p></div>
+            <img src="images/iconfinder_Rounded_Facebook_svg_5282541.png" width="30px" height="25">
+            <img src="images/iconfinder_Rounded_Instagram_svg_5282544.png" width="30px" height="25">
+            <img src="images/iconfinder_Rounded_Twitter5_svg_5282551.png" width="30px" height="25">
+            <img src="images/iconfinder_Rounded_Linkedin2_svg_5282542.png" width="30px" height="25">
+        </footer>
+    </body>
+</html>
