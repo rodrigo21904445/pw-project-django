@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="pt">
     <head>
@@ -7,10 +9,9 @@
         <meta name="keywords" content="HTML, CSS, Music, Genre">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="style.css">
-        <link rel="shortcut icon" type="images/logo-project" href="images/logo-project.ico"/>
+        <link rel="shortcut icon" type="images/logo-project" href="{% static "soundify/images/logo-project.ico" %}"/>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap" rel="stylesheet">
-        {% load static %}
         <link rel="stylesheet" href="{% static 'soundify/css/base.css' %}">
         <title>Soundify</title>
     </head>

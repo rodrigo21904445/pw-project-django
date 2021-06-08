@@ -132,7 +132,8 @@ label, input {
 }
 
 .image-container {
-    background-image: url(images/festival-image.jpeg);
+    /*background-image: url({"{{STATIC_URL}}images/festival-image.jpeg"});*/
+    background-image: url('{{ STATIC_URL }}soundify/images/festival-image.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -142,7 +143,8 @@ label, input {
 }
 
 .image-container-2 {
-    background-image: url(images/festival-image-2.jpg);
+    /*background-image: url("{% static "static/soundify/images/festival-image-2.jpg" %}");*/
+    background-image: url('{{ STATIC_URL }}soundify/images/festival-image-2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
