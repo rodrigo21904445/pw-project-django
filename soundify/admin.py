@@ -4,3 +4,5 @@ from .models import Music
 
 # Register your models here.
 admin.site.register(Music)
+admin.site.register(User)
+admin.site.register(Playlist)

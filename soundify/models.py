@@ -3,7 +3,7 @@ from django.db.models.fields.related import ForeignKey
 
 # Create your models here.
 class User(models.Model):
-    username = models.CharField(max_length=64, on_delete=models.CASCADE)
+    username = models.CharField(max_length=64)
     name = models.CharField(max_length=64)
     password = models.CharField(max_length=32)
     email = models.EmailField(max_length=32)
@@ -13,7 +13,7 @@ class User(models.Model):
 
 
 class Music(models.Model):
-    user = models.ForeignKey(User)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=64)
     duration = models.IntegerField()
     genre = models.CharField(max_length=64)
@@ -21,9 +21,9 @@ class Music(models.Model):
     def __str__(self):
         return f"{self.user} uploaded {self.name}: {self.duration} ({self.genre})"
 
-class Playlist(self):
+class Playlist(models.Model):
     name = models.ManyToManyField(Music, blank=True)
-    user = ForeignKey(User)
+    user = ForeignKey(User, on_delete=models.CASCADE)
     genre = models.CharField(max_length=64)
     
 
