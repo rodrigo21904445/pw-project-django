@@ -1,0 +1,13 @@
+{% extends "soundify/base.html" %}
+
+{% block main %}
+
+<main id="user-container">
+    <h1>Welcome, {{ request.user.username }}</h1>
+
+    <p>Username: {{ request.user.username }}</p>
+    <p>Email: {{ request.user.email }}</p>
+    <a href="{% url 'soundify:logout' %}">Log Out</a>
+</main>
+
+{% endblock %}
