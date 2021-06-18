@@ -1,3 +1,4 @@
+from soundify.models import Contacto
 from django.shortcuts import render
 from django.urls import reverse
 from django.http import HttpResponseRedirect
@@ -57,3 +58,12 @@ def login_page_view(request):
 def logout_page_view(request):
     logout(request)
     return render(request, "soundify/login.html", {"message": "Logged out."})
+
+
+def contacto_view(request):
+    form = ContactoForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse('soundify:contacto'))
+    context = {'form': form}
+    return render(request, "soundify/formulario.html", context)

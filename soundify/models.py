@@ -25,5 +25,16 @@ class Playlist(models.Model):
     name = models.ManyToManyField(Music, blank=True)
     user = ForeignKey(User, on_delete=models.CASCADE)
     genre = models.CharField(max_length=64)
-    
 
+    def __str__(self):
+        return f"Playlist {self.name}: {self.user} -> {self.genre}"
+    
+class Contacto(models.Model):
+    nome = models.CharField(max_length=64)
+    apelido = models.CharField(max_length=64)
+    telefone = models.CharField(max_length=32)
+    email = models.EmailField(max_length=32)
+    dataNascimento = models.DateField()
+
+    def __str__(self):
+        return f"Contacto: {self.nome} {self.apelido} ({self.telefone}) com {self.email} nascido em {self.dataNascimento}"
