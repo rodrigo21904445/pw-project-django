@@ -14,4 +14,8 @@ urlpatterns = [
     path('login.html', views.login_page_view, name='login'),
     path('logout', views.logout_page_view, name='logout'),
     path('user.html', views.user_page_view, name='user'),
+    path('contacto.html', views.contacto_page_view, name='contacto'),
+    path('novo_contacto.html', views.novo_contacto_view, name='novo'),
+    path('edita_contacto.html/<int:contacto_id>', views.edita_contacto_view, name='edita'),
+    path('apaga/<int:contacto_id>', views.apaga_contacto_view, name='apaga'),
 ]

@@ -30,6 +30,7 @@ class Playlist(models.Model):
         return f"Playlist {self.name}: {self.user} -> {self.genre}"
     
 class Contacto(models.Model):
+    contacto_id = models.IntegerField()
     nome = models.CharField(max_length=64)
     apelido = models.CharField(max_length=64)
     telefone = models.CharField(max_length=32)
@@ -37,4 +38,4 @@ class Contacto(models.Model):
     dataNascimento = models.DateField()
 
     def __str__(self):
-        return f"Contacto: {self.nome} {self.apelido} ({self.telefone}) com {self.email} nascido em {self.dataNascimento}"
+        return f"Contacto: {self.contacto_id}, {self.nome} {self.apelido} ({self.telefone}) com {self.email} nascido em {self.dataNascimento}"
