@@ -76,16 +76,16 @@ def novo_contacto_view(request):
     return render(request, "soundify/novo_contacto.html", context)
 
 def edita_contacto_view(request, contacto_id):
-    contacto = Contacto.objects.get(id=contacto_id)
+    contacto = Contacto.objects.get(contacto_id=contacto_id)
     form = ContactoForm(request.POST or None, instance=contacto)
 
     if form.is_valid():
         form.save()
         return HttpResponseRedirect(reverse('soundify:contacto'))
 
-    context = {'form': form, 'contacto_id': contacto_id}
-    return render(request, 'soundify/edita_contacto.html', context)
+    context = {'form': form, 'contacto_id': contacto_id, 'contacto': contacto}
+    return render(request, "soundify/edita_contacto.html", context)
 
 def apaga_contacto_view(request, contacto_id):
-    Contacto.objects.get(id=contacto_id).delete()
+    Contacto.objects.get(contacto_id=contacto_id).delete()
     return HttpResponseRedirect(reverse('soundify:contacto'))

@@ -7,7 +7,7 @@
 
         {% for contacto in contactos %}
             <p>
-                {{ contacto.nome }}
+                {{ contacto.nome }} {{contacto.apelido}} ({{contacto.email}})
                 <a href="{% url 'soundify:edita' contacto.contacto_id %}" class="btn btn-warning">Editar</a>
             </p>
         {% endfor %}
