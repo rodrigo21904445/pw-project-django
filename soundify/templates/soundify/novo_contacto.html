@@ -1,15 +1,16 @@
 {% extends "soundify/base.html" %}
 
 {% block main %}
+    <section class="novo-contacto-container">
+        <h1 class="contacto-header-main">Contacto</h1>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
 
-    <h1>Contacto</h1>
-    <form action="" method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
+            <a href="{% url 'soundify:contacto' %}" class="btn btn-warning">Cancelar</a>
+            <input type="submit" value="Gravar" class="btn btn-sucess">
 
-        <a href="{% url 'soundify:contacto' %}" class="btn btn-warning">Cancelar</a>
-        <input type="submit" value="Gravar" class="btn btn-sucess">
-
-    </form>
+        </form>
+    </section>
 
 {% endblock %}

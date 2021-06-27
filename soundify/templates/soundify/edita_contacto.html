@@ -1,7 +1,8 @@
 {% extends "soundify/base.html" %}
 
 {% block main %}
-    <h2>Contacto</h2>
+    <section class="edita-contacto-container">
+        <h2>Contacto</h2>
         <!--action devia ter isto {% url 'soundify:edita' contacto.contacto_id %} mas nao funciona se tiver-->
         <form action="{% url 'soundify:edita' contacto.contacto_id %}" method="POST">
             {% csrf_token %}
@@ -12,5 +13,6 @@
             <a href="{% url 'soundify:apaga' contacto_id %}" role="button" class="btn btn-danger">Apagar</a>
 
         </form>
+    </section>
 
 {% endblock %}

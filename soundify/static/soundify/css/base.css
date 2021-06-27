@@ -15,6 +15,9 @@ html, body {
 footer{
     font-size: 10px;
     font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 label, input {
@@ -90,7 +93,7 @@ label, input {
 }
 
 .search {
-    margin-right: 750px;
+    margin-right: 700px;
     margin-top: 15px;
 }
 
@@ -104,13 +107,23 @@ label, input {
     border: none;
     border-radius: 150px;;
     padding: 0 30px;
-    padding-top: 5px;
+    padding-top: 9px;
     vertical-align: middle;
     font-size: 16px;
     line-height: 36px;
     text-align: center;
     text-decoration: none;
-    margin-left: 200px;
+    margin-left: 100px;
+}
+
+.contacto {
+    margin-top: 15px;
+    margin-right: 100px;
+}
+
+.logout {
+    margin-top: 15px;
+    margin-left: 100px;
 }
 
 @keyframes image-container-animation {
@@ -672,10 +685,49 @@ h1 > #user-container {
 }
 
 .container-contacto {
-    background-color: #45526c;
-    margin-bottom: 500px;
+    background-color: #45526c;    
+    padding-bottom: 650px;
 }
 
 .contacto-header-main {
     color: #4e0000;
+    font-size: 40px;
+    font-family: 'Londrina Solid', cursive;
+    margin-left: 100px;
+}
+
+.novo-contacto-container {
+    background-color: #45526c;    
+    padding-bottom: 150px;   
+}
+
+.edita-contacto-container {
+    background-color: #45526c;    
+    padding-bottom: 150px;   
+}
+
+.contactos-p {
+    margin-left: 100px;
+}
+
+.btn-novo-contacto {
+    font-size: 30px;
+    font-family: 'Londrina Solid', cursive;
+    color: #eeebdd;
+    border-radius: 150px;
+    text-decoration: none;
+    background-color: #45526c;
+    padding: 0 30px;
+    padding-top: 2px;
+    vertical-align: middle;
+    line-height: 36px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 750px;
+}
+
+.btn-novo-contacto:hover{
+    color: #4e0000;
+    text-decoration: none;
+    border: 2px solid #4e0000;
 }
