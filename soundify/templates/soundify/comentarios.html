@@ -1,0 +1,17 @@
+{% extends "soundify/base.html" %}
+
+{% block main %}
+    <section class="comentarios-container">
+        <form action="{% url 'soundify:comentarios' %}" method="POST">
+            {% csrf_token %}
+
+            <h3 class="comentarios-header">Adicione o seu comentário aqui</h3>
+        
+            <label for="comentario">Comente aqui:</label>
+            <input type="text" name="comentario" id="comentario">
+
+            <input type="submit" value="Submeter">
+        </form>
+    </section>
+
+{% endblock %}

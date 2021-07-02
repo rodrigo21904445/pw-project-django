@@ -14,8 +14,7 @@ html, body {
 
 footer{
     font-size: 10px;
-    font-weight: bold;
-    position: absolute;
+    font-weight: bold;    
     bottom: 0;
     width: 100%;
 }
@@ -113,17 +112,28 @@ label, input {
     line-height: 36px;
     text-align: center;
     text-decoration: none;
-    margin-left: 100px;
+    margin-left: 50px;
 }
 
 .contacto {
     margin-top: 15px;
-    margin-right: 100px;
+    margin-right: 50px;
+    margin-left: 50px;
 }
 
 .logout {
     margin-top: 15px;
-    margin-left: 100px;
+    margin-left: 25px;
+}
+
+.comentarios {
+    margin-top: 15px;
+    margin-left: 25px;
+}
+
+.quizz {
+    margin-top: 15px;
+    margin-left: 25px;
 }
 
 @keyframes image-container-animation {
@@ -625,7 +635,7 @@ input[type="checkbox"] {
 
 .tables-section {
     background-color: #45526c;
-    height: 50em;
+    padding-bottom: 100px;
 }
 
 .html-table {
@@ -730,4 +740,46 @@ h1 > #user-container {
     color: #4e0000;
     text-decoration: none;
     border: 2px solid #4e0000;
+}
+
+.quizz-container {
+    background-color: #45526c;
+    padding-bottom: 75px;
+}
+
+.quizz-header-main {
+    color: #4e0000;
+    font-size: 40px;
+    font-family: 'Londrina Solid', cursive;
+    margin-left: 100px;
+}
+
+.comentarios-container {
+    background-color: #45526c;
+    padding-bottom: 650px;
+}
+
+.comentarios-header {
+    color: #4e0000;
+    font-size: 40px;
+    font-family: 'Londrina Solid', cursive;
+    margin-left: 100px;
+}
+
+.resultados-container {
+    background-color: #45526c;
+}
+
+.resultados-header {
+    color: #4e0000;
+    font-size: 60px;
+    font-family: 'Londrina Solid', cursive;
+    text-align: center;
+}
+
+.resultados-points {
+    color: #4e0000;
+    font-size: 20px;
+    font-family: 'Londrina Solid', cursive;
+    text-align: center;
 }

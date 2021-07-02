@@ -18,4 +18,6 @@ urlpatterns = [
     path('novo_contacto.html', views.novo_contacto_view, name='novo'),
     path('edita_contacto.html/<int:contacto_id>', views.edita_contacto_view, name='edita'),
     path('apaga/<int:contacto_id>', views.apaga_contacto_view, name='apaga'),
+    path('quizz.html', views.quizz_page_view, name='quizz'),
+    path('comentarios.html', views.comentarios_page_view, name='comentarios'),
 ]

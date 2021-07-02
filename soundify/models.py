@@ -39,3 +39,27 @@ class Contacto(models.Model):
 
     def __str__(self):
         return f"Contacto: {self.contacto_id}, {self.nome} {self.apelido} ({self.telefone}) com {self.email} nascido em {self.dataNascimento}"
+
+class Quizz(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    resposta1 = models.CharField(max_length=32, blank=True)
+    resposta2 = models.CharField(max_length=32, blank=True)
+    resposta3 = models.CharField(max_length=32, blank=True)
+    resposta4 = models.CharField(max_length=32, blank=True)
+    resposta5 = models.CharField(max_length=32, blank=True)
+    resposta6 = models.CharField(max_length=32, blank=True)
+    resposta7 = models.CharField(max_length=32, blank=True)
+    resposta8 = models.CharField(max_length=32, blank=True)
+    resposta9 = models.CharField(max_length=32, blank=True)
+    resposta10 = models.CharField(max_length=32, blank=True)
+
+
+    def __str__(self):
+        return f"User: {self.user}"
+
+class Comentario(models.Model):
+    user = models.CharField(max_length=64)
+    comentario = models.CharField(max_length=128, blank=True)
+
+    def __str__(self):
+        return f"O user {self.user} comentou o seguinte {self.comentario}"

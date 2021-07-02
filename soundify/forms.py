@@ -23,5 +23,3 @@ class ContactoForm(ModelForm):
             'email': 'Email',
             'dataNascimento': 'Data de Nascimento',
         }
-
-        

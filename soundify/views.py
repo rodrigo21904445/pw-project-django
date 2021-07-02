@@ -1,4 +1,4 @@
-from .models import Contacto
+from .models import Contacto, Quizz, Comentario
 from .forms import ContactoForm
 from django.shortcuts import render
 from django.urls import reverse
@@ -89,3 +89,54 @@ def edita_contacto_view(request, contacto_id):
 def apaga_contacto_view(request, contacto_id):
     Contacto.objects.get(contacto_id=contacto_id).delete()
     return HttpResponseRedirect(reverse('soundify:contacto'))
+
+def quizz_page_view(request):
+    if not request.user.is_authenticated:
+            return HttpResponseRedirect("login.html")
+    """
+    if request.method == "POST":
+        form = QuizzForm(request.POST or None)
+        if form.is_valid:
+            form.save()
+            return HttpResponseRedirect(reverse('soundify:resultados'))
+
+        context = {'form': form}
+        return render(request, "soundify/quizz.html", context)
+
+    form = QuizzForm(None)
+    """
+
+    anwsers = {
+        'pergunta1': 'rap',
+        'pergunta2': 'cleveland ohio',
+        'pergunta3': 'the weeknd',
+        'pergunta4': 'masked wolf',
+        'pergunta5': 'astronaut in the ocean masked wolf',
+        'pergunta6': 'olivia rodrigo',
+        'pergunta7': 'justin bieber',
+        'pergunta8': 'the weeknd',
+        'pergunta9': 'bliding lights',
+        'pergunta10': 'justin bieber',
+    }
+
+    if request.method == "POST":
+        # cada pergunta vale dois pontos
+        pontos_globais = 0
+
+        for pergunta in anwsers:
+            if(request.POST[pergunta] == anwsers[pergunta]):
+                pontos_globais += 2
+
+        return render(request, "soundify/resultados.html", {'pontos_globais': pontos_globais, 'user': request.user})
+
+    return render(request, "soundify/quizz.html")
+
+def comentarios_page_view(request):
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect("login.html")
+
+    if request.method == "POST":
+        new_comentario = Comentario(user=request.user, comentario=request.POST['comentario'])
+        new_comentario.save()
+
+    return render(request, "soundify/comentarios.html")

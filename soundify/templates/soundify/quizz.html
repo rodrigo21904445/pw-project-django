@@ -1,0 +1,46 @@
+{% extends "soundify/base.html" %}
+
+{% block main %}
+
+<section class="quizz-container">
+    <h1 class="quizz-header-main">Quizz</h1>
+    <form action="{% url 'soundify:quizz' %}" method="POST">
+        {% csrf_token %} 
+        
+        <label>Masked wolf faz que tipo de musica?</label>
+        <input type="text" name="pergunta1" class="perguntas">
+
+        <label>DaBaby é originalmente de onde?</label>
+        <input type="text" name="pergunta2" class="perguntas">
+
+        <label>Quem lançou o album After Hours?</label>
+        <input type="text" name="pergunta3" class="perguntas">
+
+        <label>Qual o artista menos conhecido?</label>
+        <input type="text" name="pergunta4" class="perguntas">
+
+        <label>Qual a musica com menos visualizações?</label>
+        <input type="text" name="pergunta5" class="perguntas">
+
+        <label>Quem mais recentemente destes artistas lançou um album?</label>
+        <input type="text" name="pergunta6" class="perguntas">
+
+        <label>Qual o artista presente na lista que começou a sua carreira musical aos 15/16 anos?</label>
+        <input type="text" name="pergunta7" class="perguntas">
+
+        <label>Qual o artista mais conhecido?</label>
+        <input type="text" name="pergunta8" class="perguntas">
+
+        <label>Qual a musica com mais visualizações?</label>
+        <input type="text" name="pergunta9" class="perguntas">
+
+        <label>Qual o artista com mais subscritores no youtube?</label>
+        <input type="text" name="pergunta10" class="perguntas">
+
+        <input type="submit" value="Submeter" class="btn btn-sucess">
+
+    </form>
+</section>
+
+
+{% endblock %}
