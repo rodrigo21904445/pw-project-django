@@ -11,6 +11,7 @@ urlpatterns = [
     path('search.html', views.search_page_view, name='search'), 
     path('register.html', views.register_page_view, name="register"),
     path('feedback.html', views.feedback_page_view, name="feedback"),
+    path('sections/login.html', views.login_page_view, name='login'),
     path('login.html', views.login_page_view, name='login'),
     path('logout', views.logout_page_view, name='logout'),
     path('user.html', views.user_page_view, name='user'),
@@ -20,4 +21,5 @@ urlpatterns = [
     path('apaga/<int:contacto_id>', views.apaga_contacto_view, name='apaga'),
     path('quizz.html', views.quizz_page_view, name='quizz'),
     path('comentarios.html', views.comentarios_page_view, name='comentarios'),
+    path('sections/<int:num>', views.section, name='section'),
 ]

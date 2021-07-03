@@ -1,3 +1,4 @@
+from django.http.response import Http404, HttpResponse
 from .models import Contacto, Quizz, Comentario
 from .forms import ContactoForm
 from django.shortcuts import render
@@ -140,3 +141,35 @@ def comentarios_page_view(request):
         new_comentario.save()
 
     return render(request, "soundify/comentarios.html")
+
+def section(request, num):
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect("login.html")
+    
+    pages = [
+        "index.html",
+        "search.html",
+        "quizz.html",
+        "comentarios.html",
+        "contactos.html",
+        "login.html",
+        "logout.html",
+        "register.html",
+    ]
+
+    pages_dict = {
+        "index.html": index_page_view(request),
+        "search.html": search_page_view(request),
+        "quizz.html": quizz_page_view(request),
+        "comentarios.html": comentarios_page_view(request),
+        "contactos.html": contacto_page_view(request),
+        "login.html": login_page_view(request),
+        "logout.html": logout_page_view(request),
+        "register.html": register_page_view(request),
+    }
+
+    if 1 <= num <= 8:
+        key = pages[num -1]
+        return HttpResponse(pages_dict[key])        
+    else:
+        raise Http404("No such section")
