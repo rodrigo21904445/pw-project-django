@@ -154,9 +154,20 @@ label, input {
     }
 }
 
+.image-container-src {
+    height: 650px;
+    margin-top: 5px;
+    filter: blur(8px);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+
+}
+
 .image-container {
     /*background-image: url({"{{STATIC_URL}}images/festival-image.jpeg"});*/
-    background-image: url('{{ STATIC_URL }}soundify/images/festival-image.jpeg');
+    background-image: url('images/festival-image.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -167,7 +178,7 @@ label, input {
 
 .image-container-2 {
     /*background-image: url("{% static "static/soundify/images/festival-image-2.jpg" %}");*/
-    background-image: url('{{ STATIC_URL }}soundify/images/festival-image-2.jpg');
+    background-image: url('images/festival-image-2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

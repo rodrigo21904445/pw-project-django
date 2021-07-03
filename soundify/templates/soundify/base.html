@@ -19,17 +19,17 @@
     <body>
         <nav class="main-nav">
             <ul>
-                <li><a href="{% url "soundify:index" %}" class="home">Soundify</a></li>
-                <li><a href="{% url "soundify:search" %}" class="search"><span class="material-icons">&#xe8b6;</span></a></li>
-                <li><a href="{% url "soundify:quizz" %}" class="quizz">Quizz</a></li>
-                <li><a href="{% url "soundify:comentarios" %}" class="comentarios">Comentários</a></li>
-                <li><a href="{% url "soundify:contacto" %}" class="contacto">Contactos</a></li>
-                <li><a href="{% url "soundify:login" %}" class="login">Log In</a></li>
-                <li><a href="{% url "soundify:logout" %}" class="logout">Logout</a></li>
-                <li><a href="{% url "soundify:register" %}" class="register-button">Register for FREE</a></li>
+                <li><a href="{% url "soundify:index" %}" class="home" data-link="home">Soundify</a></li>
+                <li><a href="{% url "soundify:search" %}" class="search" data-link="search"><span class="material-icons">&#xe8b6;</span></a></li>
+                <li><a href="{% url "soundify:quizz" %}" class="quizz" data-link="quizz">Quizz</a></li>
+                <li><a href="{% url "soundify:comentarios" %}" class="comentarios" data-link="comentarios">Comentários</a></li>
+                <li><a href="{% url "soundify:contacto" %}" class="contacto" data-link="contacto">Contactos</a></li>
+                <li><a href="{% url "soundify:login" %}" class="login" data-link="login">Log In</a></li>
+                <li><a href="{% url "soundify:logout" %}" class="logout" data-link="logout">Logout</a></li>
+                <li><a href="{% url "soundify:register" %}" class="register-button" data-link="register">Register for FREE</a></li>
             </ul>
         </nav>
-        <main>
+        <main id="main-content">
             {% block main %}
             {% endblock main %}
         </main>        
