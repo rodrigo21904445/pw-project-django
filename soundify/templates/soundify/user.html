@@ -7,7 +7,7 @@
 
     <p>Username: {{ request.user.username }}</p>
     <p>Email: {{ request.user.email }}</p>
-    <a href="{% url 'soundify:logout' %}">Log Out</a>
+    <a href="{% url 'soundify:logout' %}" id="logout-user-button">Log Out</a>
 </main>
 
 {% endblock %}

@@ -171,5 +171,6 @@ def section(request, num):
     if 1 <= num <= 8:
         key = pages[num -1]
         return HttpResponse(pages_dict[key])        
+        return 
     else:
         raise Http404("No such section")
